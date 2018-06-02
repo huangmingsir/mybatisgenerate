@@ -13,13 +13,15 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- 5.1.17/8.0.11 -->
+		<mysql.version>5.1.17</mysql.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.11</version>
+			<version>${mysql.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.mybatis.generator</groupId>
@@ -57,7 +59,7 @@
 						<dependency>
 							<groupId>mysql</groupId>
 							<artifactId>mysql-connector-java</artifactId>
-							<version>8.0.11</version>
+							<version>${mysql.version}</version>
 						</dependency>
 						<dependency>
 							<groupId>com.mg</groupId>
@@ -67,7 +69,7 @@
 					</dependencies>
 					<configuration>
 						<!--配置文件的路径 -->
-						<configurationFile>${basedir}/src/main/resources/generatorConfig.xml</configurationFile>
+						<configurationFile>${basedir}/src/main/resources/mysql5_config.xml</configurationFile>
 						<overwrite>true</overwrite>
 					</configuration>
 				</plugin>

@@ -139,7 +139,7 @@ public class MyPlugin extends PluginAdapter {
         select2.addElement(isNotNullElement);
 		parentElement.addElement(select2);
 		
-		//添加getList
+		//添加getCount
 		XmlElement select3 = new XmlElement("select");
 		select3.addAttribute(new Attribute("id", "getCount"));
 		select3.addAttribute(new Attribute("resultType", "java.lang.Long"));
