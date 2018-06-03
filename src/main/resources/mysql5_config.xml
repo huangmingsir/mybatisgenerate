@@ -30,7 +30,7 @@
 
 		<!-- 生成模型的包名和位置 -->
 		<javaModelGenerator
-			targetPackage="com.log.manage.entity"
+			targetPackage="com.jx.example.entity"
 			targetProject="target">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
@@ -44,14 +44,44 @@
 
 		<!-- 生成DAO的包名和位置 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.log.manage.dao"
-			implementationPackage="com.log.manage.dao.impl"
+			targetPackage="com.jx.example.dao"
+			implementationPackage="com.jx.example.dao.impl"
 			targetProject="target">
 			<property name="enableSubPackages" value="true" />
+			<!-- <property name="rootInterface"
+				value="com.mg.MybatisGen.common.BaseMapper" /> -->
 		</javaClientGenerator>
 
 		<!-- 要生成哪些表 -->
-		<table tableName="cat" domainObjectName="Cat"
+		<table tableName="user" domainObjectName="User"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="rootClass"
+				value="com.mg.MybatisGen.common.BaseEntity" />
+		</table>
+		<table tableName="role" domainObjectName="Role"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="rootClass"
+				value="com.mg.MybatisGen.common.BaseEntity" />
+		</table>
+		<table tableName="permission" domainObjectName="Permission"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="rootClass"
+				value="com.mg.MybatisGen.common.BaseEntity" />
+		</table>
+		<table tableName="user_role" domainObjectName="UserRole"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="rootClass"
+				value="com.mg.MybatisGen.common.BaseEntity" />
+		</table>
+		<table tableName="role_permission" domainObjectName="RolePermission"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
